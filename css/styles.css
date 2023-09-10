@@ -291,7 +291,6 @@ address {
     transform: translate(-50%, -50%);
     background-color: var(--primary-white-color);
     width: 528px;
-    height: 582px;
     border-radius: 4px;
 
     transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
@@ -323,10 +322,12 @@ address {
     background-color: transparent;
     width: 30px;
     height: 30px;
+
 } 
 
 .close-btn > svg {
     fill: rgb(0, 0, 0);
+    transition: fill var(--primary-translate);
 }
 
 .close-btn > svg:hover,
@@ -359,11 +360,30 @@ address {
     margin-bottom: 12px;
 }
 
+.modal-label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: #757575;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.12px;
+    margin-bottom: 10px;
+}
+
+.label {
+    margin-bottom: 4px
+}
+
 .label, .checkbox-label{
     display: block;
     font-size: 12px;
 }
 
+.text-comment {
+    display: flex;
+    flex-direction: column;
+}
 
 .input-modal {
     width: 448px;
@@ -386,8 +406,8 @@ address {
 
 .modal-img {
     fill: var(--main-text-color);
-    position: relative;
-    top: -30px;
+    position: absolute;
+    top: 50%;
     left: 12px;
     bottom: 0;
     display: flex;
@@ -410,7 +430,7 @@ address {
     border: 1px solid rgba(33, 33, 33, 0.20);
     color: var(--main-text-color);
     font-size: 14px;
-    transition-property: border var(--primary-translate);
+    transition: border-color var(--primary-translate);
     outline: none;
 }
 
@@ -452,7 +472,6 @@ address {
 }
 
 
-
 /* custom checkbox */
 .checkbox-custom {
     width: 16px;
@@ -470,6 +489,7 @@ address {
 .checkbox-custom:active {
     border-color: var(--accent-color);
 }
+
 
 .checkbox:checked + .checkbox-custom {
     background-color: var(--accent-color);
@@ -994,7 +1014,6 @@ address {
 
 .footer-form {
     display: inline-flex;
-    gap: 12px;
     align-items: center;
     justify-content: center;
     margin: 0;
@@ -1023,7 +1042,7 @@ address {
     transition: border var(--primary-translate);
     display: flex;
     align-items: center;
-
+    margin-right: 12px;
 }
 
 .subscribe-email::placeholder {
