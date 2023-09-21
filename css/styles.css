@@ -322,7 +322,7 @@ address {
     background-color: transparent;
     width: 30px;
     height: 30px;
-
+transition: fill var(--primary-translate);
 } 
 
 .close-btn > svg {
@@ -334,6 +334,7 @@ address {
 .close-btn > svg :focus,
 .close-btn >svg :active {
     fill: var(--accent-color);
+    transition: fill var(--primary-translate);
 }
 
 .modal-fill {
